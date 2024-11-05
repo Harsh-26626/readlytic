@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readlytic - Your Reading Companion</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #d7faed, #fff);
+            color: #4f4b4b;
+        }
+        header {
+            background: #629584;
+            color: #F9FAFA;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+        nav {
+            margin: 15px 0;
+        }
+		 #alag {
+           font-size:1.2em;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            color: #d1c4e9;
+            transform: scale(1.1);
+        }
+        section {
+            padding: 30px;
+            margin: 20px auto;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            max-width: 800px;
+        }
+        section:hover {
+            transform: translateY(-2px);
+        }
+        h2 {
+            color: #629584;
+            border-bottom: 2px solid #629584;
+            padding-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background: #629584;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: #d1f0db;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+        }
+        ul li:hover {
+            background: #a2e8b9;
+        }
+        .book-list {
+            display: none;
+            margin-top: 10px;
+        }
+        .book-list ul {
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 15px;
+            background: #629584;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .cta-button:hover {
+            background: #629584;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: auto;
+        }
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input:focus {
+            border-color: #629584;
+        }
+        .submit-button {
+            background: #629584;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .submit-button:hover {
+            background: #629584;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Readlytic</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+		<a id="alag" href="#signup">Signup</a>
+        <a href="#categories">Genres</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>About Readlytic</h2>
+    <p>Readlytic is your ultimate reading companion, designed to help you discover, track, and enhance your reading experience. Join a community of passionate readers!</p>
+    <a class="cta-button" href="#features">Discover More</a>
+</section>
+
+<section id="features">
+    <h2>Features</h2>
+    <ul>
+        <li>📚 Personalized book recommendations</li>
+        <li>📈 Reading tracking and progress monitoring</li>
+        <li>💬 Community discussions and reviews</li>
+        <li>📅 Reading challenges to motivate you</li>
+        <li>🔍 Easy search and filter options</li>
+    </ul>
+</section>
+
+<section id="categories">
+    <h2>Book Genres</h2>
+    <ul>
+        <li><a href="fiction.html" class="category-link" onclick="redirectToGenre('fiction'); return false;">📖 Fiction</a></li>
+        <li><a href="non_fiction.html" class="category-link" onclick="redirectToGenre('non_fiction'); return false;">📘 Non-Fiction</a></li>
+        <li><a href="romance.html" class="category-link" onclick="redirectToGenre('romance'); return false;">❤ Romance</a></li>
+        <li><a href="fantasy.html" class="category-link" onclick="redirectToGenre('fantasy'); return false;">🧙‍♂ Fantasy</a></li>
+        <li><a href="science_fiction.html" class="category-link" onclick="redirectToGenre('science_fiction'); return false;">🚀 Science Fiction</a></li>
+        <li><a href="mystery.html" class="category-link" onclick="redirectToGenre('mystery'); return false;">🕵 Mystery</a></li>
+        <li><a href="action.html" class="category-link" onclick="redirectToGenre('action'); return false;">💥 Action</a></li>
+        <li><a href="thriller.html" class="category-link" onclick="redirectToGenre('thriller'); return false;">🔪 Thriller</a></li>
+        <li><a href="horror.html" class="category-link" onclick="redirectToGenre('horror'); return false;">👻 Horror</a></li>
+        <li><a href="biography.html" class="category-link" onclick="redirectToGenre('biography'); return false;">📜 Biography</a></li>
+    </ul>
+</section>
+
+<style>
+    .category-link {
+        text-decoration: none;
+        color: #4f4b4b; 
+</style>
+
+<section id="signup">
+    <h2>Signup</h2>
+    <form action="#" method="post">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Create a password" required>
+        
+        <button type="submit" class="submit-button">Signup</button>
+    </form>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or feedback, feel free to <a href="mailto:contact@readlytic.com">email us</a>.</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Readlytic. All rights reserved.</p>
+</footer>
+
+<script>
+    function toggleBooks(categoryId) {
+        const category = document.getElementById(categoryId);
+        if (category.style.display === 'block') {
+            category.style.display = 'none';
+        } else {
+            category.style.display = 'block';
+        }
+    }
+</script>
+
+</body>
+
+<script>
+  const buttonColors = {
+  fiction: "#c4e6f5",
+  non_fiction: "#f4f7df",
+  romance: "#f7dfef",
+  fantasy: "#edc5d6",
+  science_fiction: "#cfcfe8",
+  mystery: "#9daebf",
+  action: "#bbbdb9",
+  thriller: "#b9f0e4",
+  horror: "#a6a6a6",
+  biography: "#d1c8c2"
+  };
+  
+  const hoverColors = {
+  fiction: "#a0d9f2",
+  non_fiction: "#eef5bc",
+  romance: "#f5c6e6",
+  fantasy: "#db84a9",
+  science_fiction: "#a4a3cc",
+  mystery: "#6a92ba",
+  action: "#999c97",
+  thriller: "#90d6c7",
+  horror: "#808080",
+  biography: "#ccb8ab"
+  };
+  
+  const textColors = {
+  fiction: "#40b8ed",
+  non_fiction: "#b1c746",
+  romance: "#de6fb9",
+  fantasy: "#b83b71",
+  science_fiction: "#6c6bc9",
+  mystery: "#23394f",
+  action: "#21261b",
+  thriller: "#41ab93",
+  horror: "#2E2E2E",
+  biography: "#AF8260"
+  };
+  
+  const genreColors = {
+  fiction: "#32b4ed",
+  non_fiction: "#c4cf8c",
+  romance: "#e3a1cd",
+  fantasy: "#85213a",
+  science_fiction: "#4d4ca1",
+  mystery: "#2c3e50",
+  action: "#282b24",
+  thriller: "#67cfb8",
+  horror: "#2E2E2E",
+  biography: "#AF8260"
+  };
+  
+  
+
+  function redirectToGenre(genre) {
+  const color = genreColors[genre];
+  const button = buttonColors[genre];
+  const hover = hoverColors[genre];
+  const text = textColors[genre];
+  window.location.href = `${genre}.html?color=${encodeURIComponent(color)}&button=${encodeURIComponent(button)}&hover=${encodeURIComponent(hover)}&text=${encodeURIComponent(text)}`;
+}
+
+</script>
+
+</html>

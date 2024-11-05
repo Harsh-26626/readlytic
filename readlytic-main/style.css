@@ -1,0 +1,198 @@
+:root {
+    --primary-color: #34495e; /* Default color */
+    --button-color: #34495e;
+    --hover-color: #34495e;
+    --text-color: #34495e;
+    --hex-color: #34495e;
+  }
+  
+  body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #e0f7fa, #fff);
+      color: #333;
+  }
+  
+  header {
+      background: var(--primary-color);
+      color: #F9FAFA;
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  header h1 {
+      margin: 0;
+      font-size: 2em;
+  }
+  
+  .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background: radial-gradient(circle, var(--hex-color), rgba(0, 0, 0, 0.6));
+  }
+  
+  .modal-content {
+      background-color: #ffffff;
+      margin: 2% auto; /* Adjusted margin to control vertical position */
+      padding: 30px; /* Increased padding for more inner space */
+      border-radius: 10px;
+      width: 100%; /* Changed width to 90% for a wider modal */
+      height: 100%;
+      max-width: 1000px; /* Decreased max-width for a smaller box */
+      max-height: 600px; /* Added max-height to control vertical size */
+      overflow-y: auto; /* Allows scrolling if content exceeds max-height */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      position: relative;
+  }
+  
+  .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      color: #333;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+  }
+  
+  .modal-body {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+  }
+  
+  .modal-image {
+      width: 350px;
+      height: auto;
+      border-radius: 5px;
+  }
+  
+  .modal-details {
+      max-height: 300px;
+      overflow-y: auto;
+  }
+  
+  .modal-details p {
+      margin: 0;
+      color: #333;
+      font-size: 1em;
+  }
+  
+  nav {
+      margin: 15px 0;
+  }
+  
+  nav a,
+  ul li a {
+      color: var(--text-color);
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s, transform 0.3s;
+  }
+  
+  nav a:hover {
+      color: #d1c4e9;
+      transform: scale(1.1);
+  }
+  
+  section {
+      padding: 30px;
+      margin: 20px auto;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+      max-width: 800px;
+  }
+  
+  section:hover {
+      transform: translateY(-2px);
+  }
+  
+  h2 {
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 10px;
+  }
+  
+  footer {
+      text-align: center;
+      padding: 15px 0;
+      background: var(--primary-color);
+      color: #fff;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      margin-top: 20px;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+  }
+  
+  #lih {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+  }
+  
+  ul li {
+      background: var(--button-color);
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 5px;
+      transition: background 0.3s;
+      max-width: 200px;
+      display: flex;
+      justify-content: center;
+  }
+  
+  ul li:hover {
+      background: var(--hover-color);
+  }
+  
+  ul img {
+      width: 200px;
+      height: 300px;
+      max-width: 100%;
+  }
+  
+  ul div {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+  }
+  
+  .cta-button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 15px;
+      background: var(--primary-color);
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+  }
+  
+  .cta-button:hover {
+      background: #e38dc6;
+  }
+  
+  
