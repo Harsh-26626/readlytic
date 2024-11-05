@@ -139,6 +139,11 @@
         .submit-button:hover {
             background: #629584;
         }
+        .row {
+            display: flex;              /* Makes items in each row align horizontally */
+            gap: 20px;                  /* Sets a fixed margin between elements */
+            margin-bottom: 20px;        /* Space between the rows */
+        }
     </style>
 </head>
 <body>
@@ -174,16 +179,22 @@
 <section id="categories">
     <h2>Book Genres</h2>
     <ul>
-        <li><a href="fiction.html" class="category-link" onclick="redirectToGenre('fiction'); return false;">📖 Fiction</a></li>
-        <li><a href="non_fiction.html" class="category-link" onclick="redirectToGenre('non_fiction'); return false;">📘 Non-Fiction</a></li>
-        <li><a href="romance.html" class="category-link" onclick="redirectToGenre('romance'); return false;">❤ Romance</a></li>
-        <li><a href="fantasy.html" class="category-link" onclick="redirectToGenre('fantasy'); return false;">🧙‍♂ Fantasy</a></li>
-        <li><a href="science_fiction.html" class="category-link" onclick="redirectToGenre('science_fiction'); return false;">🚀 Science Fiction</a></li>
-        <li><a href="mystery.html" class="category-link" onclick="redirectToGenre('mystery'); return false;">🕵 Mystery</a></li>
-        <li><a href="action.html" class="category-link" onclick="redirectToGenre('action'); return false;">💥 Action</a></li>
-        <li><a href="thriller.html" class="category-link" onclick="redirectToGenre('thriller'); return false;">🔪 Thriller</a></li>
-        <li><a href="horror.html" class="category-link" onclick="redirectToGenre('horror'); return false;">👻 Horror</a></li>
-        <li><a href="biography.html" class="category-link" onclick="redirectToGenre('biography'); return false;">📜 Biography</a></li>
+        <div>
+        <div class="row">
+            <li><a href="fiction.html" class="category-link" onclick="redirectToGenre('fiction'); return false;">📖 Fiction</a></li>
+            <li><a href="romance.html" class="category-link" onclick="redirectToGenre('romance'); return false;">❤ Romance</a></li>
+            <li><a href="fantasy.html" class="category-link" onclick="redirectToGenre('fantasy'); return false;">🧙‍♂ Fantasy</a></li>
+            <li><a href="science_fiction.html" class="category-link" onclick="redirectToGenre('science_fiction'); return false;">🚀 Science Fiction</a></li>
+            <li><a href="mystery.html" class="category-link" onclick="redirectToGenre('mystery'); return false;">🕵 Mystery</a></li>
+        </div>
+        <div class="row">
+            <li><a href="non_fiction.html" class="category-link" onclick="redirectToGenre('non_fiction'); return false;">📘 Non-Fiction</a></li>
+            <li><a href="action.html" class="category-link" onclick="redirectToGenre('action'); return false;">💥 Action</a></li>
+            <li><a href="thriller.html" class="category-link" onclick="redirectToGenre('thriller'); return false;">🔪 Thriller</a></li>
+            <li><a href="horror.html" class="category-link" onclick="redirectToGenre('horror'); return false;">👻 Horror</a></li>
+            <li><a href="biography.html" class="category-link" onclick="redirectToGenre('biography'); return false;">📜 Biography</a></li>
+        </div>
+    </div>
     </ul>
 </section>
 
