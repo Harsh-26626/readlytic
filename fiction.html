@@ -177,6 +177,32 @@
     </ul>
 </section>
 
+<div id="modal" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modal-title"></h2>
+      <div class="modal-body">
+          <img id="modal-image" src="" alt="Book Image" class="modal-image">
+          <div class="modal-details">
+              <p id="modal-description"></p>
+          </div>
+      </div>
+  </div>
+</div>
+
+<script>
+  function openModal(title, imageUrl, description) {
+      document.getElementById('modal').style.display = 'block';
+      document.getElementById('modal-title').innerText = title;
+      document.getElementById('modal-image').src = imageUrl;
+      document.getElementById('modal-description').innerText = description;
+  }
+
+  function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+  }
+</script>
+
 <section id="contact">
     <h2>Contact Us</h2>
     <p>If you have any questions or feedback, feel free to <a href="mailto:contact@readlytic.com">email us</a>.</p>
@@ -189,5 +215,30 @@
 </body>
 
 <script src="genre_color.js"></script>
+
+<script>
+  const hexcodes = {
+    1 : "#96276B",
+    2 : "#49B9CD",
+    3 : "#FAF2E5",
+    4 : "#F8B9A8",
+    5 : "#E5CEAF",
+    6 : "#00BAC5",
+    7 : "#B7AF33",
+    8 : "#00A9AC",
+    9 : "#65828A"
+  };
+
+  function BookBG(book) {
+  const hex = hexcodes[book];
+  if (hex) {
+      // Set the CSS variable --hex-color in the root element (:root)
+      document.documentElement.style.setProperty('--hex-color', hex);
+      console.log(document.documentElement.style.getPropertyValue('--hex-color'));
+    } else {
+      console.error("Invalid book ID");
+    }
+}
+</script>
 
 </html>
