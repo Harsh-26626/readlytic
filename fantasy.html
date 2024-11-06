@@ -21,15 +21,30 @@
         <div>
           <div style="margin-right: 25px;">
             <img src="https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/the%20poppy%20war.png"
-                 alt="The Poppy War by R.F. Kuang" >
+                 alt="The Poppy War by R.F. Kuang"
+                 <a href="#" onclick="BookBG('1');
+                 openModal('The Poppy War',
+                'https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/the%20poppy%20war.png',
+                'Details about the book go here.');
+                return false;">
           </div>
           <div style="margin-right: 25px;">
             <img src="https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/legends%20and%20lattes.png"
-                 alt="Legends & Lattes by Travis Baldree">
+                 alt="Legends & Lattes by Travis Baldree"
+                 <a href="#" onclick="BookBG('2');
+                 openModal('Legends & Lattes',
+                'https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/legends%20and%20lattes.png',
+                'Details about the book go here.');
+                return false;">
           </div>
           <div>
             <img src="https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/the%20green%20bone%20saga.jpg"
-                 alt="The Green Bone Saga by Fonda Lee">
+                 alt="The Green Bone Saga by Fonda Lee"
+                 <a href="#" onclick="BookBG('3');
+                 openModal('The Green Bone Saga',
+                'https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/the%20green%20bone%20saga.jpg',
+                'Details about the book go here.');
+                return false;">
           </div>
         </div>
       <div>
@@ -64,15 +79,30 @@
         <div>
           <div style="margin-right: 25px;">
             <img src="https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/uprooted.png"
-                 alt="Uprooted by Naomi Novik" >
+                 alt="Uprooted by Naomi Novik"
+                 <a href="#" onclick="BookBG('4');
+                 openModal('Uprooted',
+                'https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/uprooted.png',
+                'Details about the book go here.');
+                return false;">
           </div>
           <div style="margin-right: 25px;">
             <img src="https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/lords%20of%20the%20ring.png"
-                 alt="The Lord of the Rings by J.R.R. Tolkien">
+                 alt="The Lord of the Rings by J.R.R. Tolkien"
+                 <a href="#" onclick="BookBG('5');
+                 openModal('The Lord of the Rings',
+                'https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/lords%20of%20the%20ring.png',
+                'Details about the book go here.');
+                return false;">
           </div>
           <div>
             <img src="https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/the%20first%20law%20trilogy.jpg"
-                 alt="The First Law Trilogy by Joe Abercrombie">
+                 alt="The First Law Trilogy by Joe Abercrombie"
+                 <a href="#" onclick="BookBG('6');
+                 openModal('The First Law Trilogy',
+                'https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/the%20first%20law%20trilogy.jpg',
+                'Details about the book go here.');
+                return false;">
           </div>
         </div>
       <div>
@@ -107,11 +137,21 @@
         <div>
           <div style="margin-right: 25px;">
             <img src="https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/priest%20of%20bones.jpeg"
-                 alt="Priest of Bones by Peter McLean" >
+                 alt="Priest of Bones by Peter McLean"
+                 <a href="#" onclick="BookBG('7');
+                 openModal('Priest of Bones',
+                'https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/priest%20of%20bones.jpeg',
+                'Details about the book go here.');
+                return false;">
           </div>
           <div>
             <img src="https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/american%20gods.jpeg"
-                 alt="American Gods by Neil Gaiman">
+                 alt="American Gods by Neil Gaiman"
+                 <a href="#" onclick="BookBG('8');
+                 openModal('American Gods',
+                'https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/american%20gods.jpeg',
+                'Details about the book go here.');
+                return false;">
           </div>
         </div>
       <div>
@@ -137,6 +177,32 @@
     </ul>
 </section>
 
+<div id="modal" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modal-title"></h2>
+      <div class="modal-body">
+          <img id="modal-image" src="" alt="Book Image" class="modal-image">
+          <div class="modal-details">
+              <p id="modal-description"></p>
+          </div>
+      </div>
+  </div>
+</div>
+
+<script>
+  function openModal(title, imageUrl, description) {
+      document.getElementById('modal').style.display = 'block';
+      document.getElementById('modal-title').innerText = title;
+      document.getElementById('modal-image').src = imageUrl;
+      document.getElementById('modal-description').innerText = description;
+  }
+
+  function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+  }
+</script>
+
 <section id="contact">
     <h2>Contact Us</h2>
     <p>If you have any questions or feedback, feel free to <a href="mailto:contact@readlytic.com">email us</a>.</p>
@@ -149,5 +215,30 @@
 </body>
 
 <script src="genre_color.js"></script>
+
+<script>
+  const hexcodes = {
+    1 : "#C2C2C2",
+    2 : "#BE8035",
+    3 : "#57C04A",
+    4 : "#FFF7E0",
+    5 : "#CDD0D2",
+    6 : "#D79B7F",
+    7 : "#ABA08A",
+    8 : "#393D3C",
+    9 : "#65828A"
+  };
+
+  function BookBG(book) {
+  const hex = hexcodes[book];
+  if (hex) {
+      // Set the CSS variable --hex-color in the root element (:root)
+      document.documentElement.style.setProperty('--hex-color', hex);
+      console.log(document.documentElement.style.getPropertyValue('--hex-color'));
+    } else {
+      console.error("Invalid book ID");
+    }
+}
+</script>
 
 </html>
