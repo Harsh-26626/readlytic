@@ -21,15 +21,30 @@
         <div>
             <div style="margin-right: 25px;">
                 <img src="https://assets.onecompiler.app/42vy5gdhb/42vy5hpnx/Wings%20of%20Fire.jpg" 
-                     alt="Wings of Fire">
+                     alt="Wings of Fire"
+                     <a href="#" onclick="BookBG('1');
+                 openModal('Wings of Fire',
+                'https://assets.onecompiler.app/42vy5gdhb/42vy5hpnx/Wings%20of%20Fire.jpg',
+                'Details about the book go here.');
+                return false;">
             </div>
             <div style="margin-right: 25px;">
                 <img src="https://assets.onecompiler.app/42vy5gdhb/42vy5hpnx/Steve%20Jobs.jpg" 
-                     alt="Steve Jobs by Walter Isaacson">
+                     alt="Steve Jobs by Walter Isaacson"
+                     <a href="#" onclick="BookBG('2');
+                 openModal('Steve Jobs by Walter Isaacson',
+                'https://assets.onecompiler.app/42vy5gdhb/42vy5hpnx/Steve%20Jobs.jpg',
+                'Details about the book go here.');
+                return false;">
             </div>
             <div>
                 <img src="https://assets.onecompiler.app/42vy5gdhb/42vy5hpnx/The%20Diary%20of%20A%20Young%20GIrl.jpg" 
-                     alt="The Diary of a Young Girl">
+                     alt="The Diary of a Young Girl"
+                     <a href="#" onclick="BookBG('3');
+                 openModal('The Diary of a Young Girl',
+                'https://assets.onecompiler.app/42vy5gdhb/42vy5hpnx/The%20Diary%20of%20A%20Young%20GIrl.jpg',
+                'Details about the book go here.');
+                return false;">
             </div>
         </div>
         <div>
@@ -65,15 +80,30 @@
         <div>
             <div style="margin-right: 25px;">
                 <img src="https://assets.onecompiler.app/42vy5gdhb/42vy5hpnx/Ambedkar%20A%20Life.jpg" 
-                     alt="Ambedkar: A Life">
+                     alt="Ambedkar: A Life"
+                     <a href="#" onclick="BookBG('4');
+                 openModal('Ambedkar: A Life',
+                'https://assets.onecompiler.app/42vy5gdhb/42vy5hpnx/Ambedkar%20A%20Life.jpg',
+                'Details about the book go here.');
+                return false;">
             </div>
             <div style="margin-right: 25px;">
                 <img src="https://assets.onecompiler.app/42vy5gdhb/42vy5hpnx/Einstein.jpg" 
-                     alt="Einstein: His Life and Universe">
+                     alt="Einstein: His Life and Universe"
+                     <a href="#" onclick="BookBG('5');
+                 openModal('Einstein: His Life and Universe',
+                'https://assets.onecompiler.app/42vy5gdhb/42vy5hpnx/Einstein.jpg',
+                'Details about the book go here.');
+                return false;">
             </div>
             <div>
                 <img src="https://assets.onecompiler.app/42vy5gdhb/42vy5hpnx/Team%20of%20Rivals.jpg" 
-                     alt="Team of Rivals">
+                     alt="Team of Rivals"
+                     <a href="#" onclick="BookBG('6');
+                 openModal('Team of Rivals',
+                'https://assets.onecompiler.app/42vy5gdhb/42vy5hpnx/Team%20of%20Rivals.jpg',
+                'Details about the book go here.');
+                return false;">
             </div>
         </div>
         <div>
@@ -108,6 +138,32 @@
     </ul>
 </section>
 
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <div class="modal-body">
+            <img id="modal-image" src="" alt="Book Image" class="modal-image">
+            <div class="modal-details">
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  <script>
+    function openModal(title, imageUrl, description) {
+        document.getElementById('modal').style.display = 'block';
+        document.getElementById('modal-title').innerText = title;
+        document.getElementById('modal-image').src = imageUrl;
+        document.getElementById('modal-description').innerText = description;
+    }
+  
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+    }
+  </script>
+
 <section id="contact">
     <h2>Contact Us</h2>
     <p>If you have any questions or feedback, feel free to <a href="mailto:contact@readlytic.com">email us</a>.</p>
@@ -120,5 +176,30 @@
 </body>
 
 <script src="genre_color.js"></script>
+
+<script>
+    const hexcodes = {
+      1 : "#875E1C",
+      2 : "#FFFFFF",
+      3 : "#F2D59D",
+      4 : "#6C6C6E",
+      5 : "#EDEEDC",
+      6 : "#F7E8D1",
+      7 : "#0E0C0D",
+      8 : "#00AAD6",
+      9 : "#00AAD6"
+    };
+  
+    function BookBG(book) {
+    const hex = hexcodes[book];
+    if (hex) {
+        // Set the CSS variable --hex-color in the root element (:root)
+        document.documentElement.style.setProperty('--hex-color', hex);
+        console.log(document.documentElement.style.getPropertyValue('--hex-color'));
+      } else {
+        console.error("Invalid book ID");
+      }
+  }
+  </script>
 
 </html>
