@@ -21,15 +21,30 @@
         <div>
             <div style="margin-right: 25px;">
                 <img src="https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/The%20Couple%20Next%20Door.jpeg" 
-                     alt="The Couple Next Door by Shari Lapena">
+                     alt="The Couple Next Door by Shari Lapena"
+                     <a href="#" onclick="BookBG('1');
+                 openModal('The Couple Next Door',
+                'https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/The%20Couple%20Next%20Door.jpeg',
+                'Details about the book go here.');
+                return false;">
             </div>
             <div style="margin-right: 25px;">
                 <img src="https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/Behind%20Closed%20Doors.jpeg" 
-                     alt="Behind Closed Doors by B.A. Paris">
+                     alt="Behind Closed Doors by B.A. Paris"
+                     <a href="#" onclick="BookBG('2');
+                 openModal('Behind Closed Doors',
+                'https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/Behind%20Closed%20Doors.jpeg',
+                'Details about the book go here.');
+                return false;">
             </div>
             <div>
                 <img src="https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/I%20am%20pilgrim.jpeg" 
-                     alt="I Am Pilgrim by Terry Hayes">
+                     alt="I Am Pilgrim by Terry Hayes"
+                     <a href="#" onclick="BookBG('3');
+                 openModal('I Am Pilgrim',
+                'https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/I%20am%20pilgrim.jpeg',
+                'Details about the book go here.');
+                return false;">
             </div>
         </div>
         <div>
@@ -65,15 +80,30 @@
         <div>
             <div style="margin-right: 25px;">
                 <img src="https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/The%20Gray%20Man.jpeg" 
-                     alt="The Gray Man by Mark Greaney">
+                     alt="The Gray Man by Mark Greaney"
+                     <a href="#" onclick="BookBG('4');
+                 openModal('The Gray Man',
+                'https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/The%20Gray%20Man.jpeg',
+                'Details about the book go here.');
+                return false;">
             </div>
             <div style="margin-right: 25px;">
                 <img src="https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/The%20Secret%20History.jpeg" 
-                     alt="The Secret History by Donna Tartt">
+                     alt="The Secret History by Donna Tartt"
+                     <a href="#" onclick="BookBG('5');
+                 openModal('The Secret History',
+                'https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/The%20Secret%20History.jpeg',
+                'Details about the book go here.');
+                return false;">
             </div>
             <div>
                 <img src="https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/The%20Firm.jpg" 
-                     alt="The Firm by John Grisham">
+                     alt="The Firm by John Grisham"
+                     <a href="#" onclick="BookBG('6');
+                 openModal('The Firm',
+                'https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/The%20Firm.jpg',
+                'Details about the book go here.');
+                return false;">
             </div>
         </div>
         <div>
@@ -109,11 +139,21 @@
         <div>
             <div style="margin-right: 25px;">
                 <img src="https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/Before%20I%20Go%20to%20Sleep.jpeg" 
-                     alt="Before I Go to Sleep by S.J. Watson">
+                     alt="Before I Go to Sleep by S.J. Watson"
+                     <a href="#" onclick="BookBG('7');
+                 openModal('Before I Go to Sleep',
+                'https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/Before%20I%20Go%20to%20Sleep.jpeg',
+                'Details about the book go here.');
+                return false;">
             </div>
             <div>
                 <img src="https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/sharp%20objects.jpeg" 
-                     alt="Sharp Objects by Gillian Flynn">
+                     alt="Sharp Objects by Gillian Flynn"
+                     <a href="#" onclick="BookBG('8');
+                 openModal('Sharp Objects',
+                'https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/sharp%20objects.jpeg',
+                'Details about the book go here.');
+                return false;">
             </div>
         </div>
         <div>
@@ -139,6 +179,32 @@
     </ul>
 </section>
 
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <div class="modal-body">
+            <img id="modal-image" src="" alt="Book Image" class="modal-image">
+            <div class="modal-details">
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  <script>
+    function openModal(title, imageUrl, description) {
+        document.getElementById('modal').style.display = 'block';
+        document.getElementById('modal-title').innerText = title;
+        document.getElementById('modal-image').src = imageUrl;
+        document.getElementById('modal-description').innerText = description;
+    }
+  
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+    }
+  </script>
+
 <section id="contact">
     <h2>Contact Us</h2>
     <p>If you have any questions or feedback, feel free to <a href="mailto:contact@readlytic.com">email us</a>.</p>
@@ -151,5 +217,30 @@
 </body>
 
 <script src="genre_color.js"></script>
+
+<script>
+    const hexcodes = {
+      1 : "#03A8D6",
+      2 : "#B1E0FC",
+      3 : "#A9A9AB",
+      4 : "#34808E",
+      5 : "#0C0F18",
+      6 : "#0789C3",
+      7 : "#C8C18D",
+      8 : "#00AAD6",
+      9 : "#00AAD6"
+    };
+  
+    function BookBG(book) {
+    const hex = hexcodes[book];
+    if (hex) {
+        // Set the CSS variable --hex-color in the root element (:root)
+        document.documentElement.style.setProperty('--hex-color', hex);
+        console.log(document.documentElement.style.getPropertyValue('--hex-color'));
+      } else {
+        console.error("Invalid book ID");
+      }
+  }
+  </script>
 
 </html>
