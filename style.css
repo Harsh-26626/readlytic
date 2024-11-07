@@ -64,6 +64,13 @@
       cursor: pointer;
   }
   
+  .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
   .modal-body {
       display: flex;
       gap: 20px;
@@ -86,6 +93,38 @@
       color: #333;
       font-size: 1em;
   }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button img {
+    height: 30px;
+    width: 70px;
+    margin-right: 8px;
+}
+
+.button imgg {
+    height: 30px;
+    width: 100px;
+    margin-right: 8px;
+}
   
   nav {
       margin: 15px 0;
