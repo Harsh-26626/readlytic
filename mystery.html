@@ -25,7 +25,10 @@
                      <a href="#" onclick="BookBG('1');
                  openModal('The Hound of the Baskervilles',
                 'https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/The%20Hound%20of%20the%20Baskervilles.jpeg',
-                'Details about the book go here.');
+                'Details about the book go here.',
+                'https://open.spotify.com/playlist/4mzLkTLyZEQve3OgD2yzxz?si=ac15255429254375', 
+                    'https://www.google.com/search?q=Books by Arthur Conan Doyle',
+                    'https://www.google.com/search?q=The Hound of the Baskervilles by Arthur Conan Doyle');
                 return false;">
             </div>
             <div style="margin-right: 25px;">
@@ -34,7 +37,10 @@
                      <a href="#" onclick="BookBG('2');
                  openModal('The Silent Patient',
                 'https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/The%20Silent%20Patient.jpeg',
-                'Details about the book go here.');
+                'Details about the book go here.',
+                'https://open.spotify.com/playlist/5gGzqVjq5uixy5LJNeTT0k?si=9cde72df8eac4a47', 
+                'https://www.google.com/search?q=Books by Alex Michaelides',
+                'https://www.google.com/search?q=The Silent Patient by Alex Michaelides');
                 return false;">
             </div>
             <div>
@@ -43,7 +49,10 @@
                      <a href="#" onclick="BookBG('3');
                  openModal('Big Little Lies',
                 'https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/Big%20Little%20Lies.jpeg',
-                'Details about the book go here.');
+                'Details about the book go here.',
+                'https://open.spotify.com/playlist/6YrudeKEOTUxnyLTFzOYbq?si=3fe2e0c0d27e45a6', 
+                'https://www.google.com/search?q=Books by Liane Moriarty',
+                'https://www.google.com/search?q=Big Little Lies by Liane Moriarty');
                 return false;">
             </div>
         </div>
@@ -83,7 +92,10 @@
                      <a href="#" onclick="BookBG('4');
                  openModal('Dial A for Aunties',
                 'https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/Dial%20A%20for%20Aunties.jpeg',
-                'Details about the book go here.');
+                'Details about the book go here.',
+                'https://open.spotify.com/playlist/3wo5SYOvHOoJaKw0t3Ywp6?si=eea7cd921e77498a', 
+                'https://www.google.com/search?q=Books by Jesse Q. Sutanto',
+                'https://www.google.com/search?q=Dial A for Aunties by Jesse Q. Sutanto');
                 return false;">
             </div>
             <div style="margin-right: 25px;">
@@ -92,7 +104,10 @@
                      <a href="#" onclick="BookBG('5');
                  openModal('The Inheritance Games',
                 'https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/The%20Inheritance%20Games.jpeg',
-                'Details about the book go here.');
+                'Details about the book go here.',
+                'https://open.spotify.com/playlist/4mhbhWyIisAMRg2Kun3PJw?si=7cc0ab2a3c9f4a8f', 
+                'https://www.google.com/search?q=Books by Jennifer Lynn Barnes',
+                'https://www.google.com/search?q=The Inheritance Games by Jennifer Lynn Barnes');
                 return false;">
             </div>
             <div>
@@ -101,7 +116,10 @@
                      <a href="#" onclick="BookBG('6');
                  openModal('Still Life',
                 'https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/still-life-cover.jpg',
-                'Details about the book go here.');
+                'Details about the book go here.',
+                'https://open.spotify.com/playlist/5rNgoufAb98ei8AKByPaCg?si=4ac60c4f04de4af7', 
+                'https://www.google.com/search?q=Books by Louise Penny',
+                'https://www.google.com/search?q=Still Life by Louise Penny');
                 return false;">
             </div>
         </div>
@@ -141,7 +159,10 @@
                      <a href="#" onclick="BookBG('7');
                  openModal('Gone Girl',
                 'https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/gone%20girl.jpeg',
-                'Details about the book go here.');
+                'Details about the book go here.',
+                'https://open.spotify.com/playlist/1HyeYxxgk1VDZBY7ywFT1s?si=f658fe15ecc4485a', 
+                'https://www.google.com/search?q=Books by Gillian Flynn',
+                'https://www.google.com/search?q=Gone Girl by Gillian Flynn');
                 return false;">
             </div>
             <div>
@@ -150,7 +171,10 @@
                      <a href="#" onclick="BookBG('8');
                  openModal('Sharp Objects',
                 'https://assets.onecompiler.app/42vcx6nqa/42vut4jnk/sharp%20objects.jpeg',
-                'Details about the book go here.');
+                'Details about the book go here.',
+                'https://open.spotify.com/playlist/5HI6m93IrlTXQlcbKACUbV?si=c9e5e70a70df45da', 
+                'https://www.google.com/search?q=Books by Gillian Flynn',
+                'https://www.google.com/search?q=Sharp Objects by Gillian Flynn');
                 return false;">
             </div>
         </div>
@@ -182,21 +206,46 @@
         <span class="close" onclick="closeModal()">&times;</span>
         <h2 id="modal-title"></h2>
         <div class="modal-body">
+          <div>
             <img id="modal-image" src="" alt="Book Image" class="modal-image">
+            <div class="button-container">
+              <!-- Spotify Button -->
+              <a href="#" target="_blank" id="spotify-link" class="button">
+                s<img src="https://assets.onecompiler.app/42vy5gdhb/42xdkqbfy/spotify%20logo%20(1).png" alt="Spotify Logo">
+              </a>
+              
+              <!-- More from the Author Button --> 
+              <a href="#" target="_blank" id="author-link" class="button">
+                  a<img style="width: 120px;" src="https://assets.onecompiler.app/42vy5gdhb/42xdkqbfy/Screenshot%202024-11-07%20143109.png" alt="Author Logo">
+              </a>
+              
+              <!-- Google Button -->
+              <a href="#" target="_blank" id="google-link" class="button">
+                g<img src="https://assets.onecompiler.app/42vy5gdhb/42xdkqbfy/Google%20logo.png" alt="Google Logo">
+              </a>
+              </div>
+            </div>
             <div class="modal-details">
                 <p id="modal-description"></p>
             </div>
+            <!-- Button Container -->
+            
         </div>
     </div>
   </div>
   
   <script>
-    function openModal(title, imageUrl, description) {
+    function openModal(title, imageUrl, description, spotifyUrl, authorUrl, googleUrl) {
         document.getElementById('modal').style.display = 'block';
         document.getElementById('modal-title').innerText = title;
         document.getElementById('modal-image').src = imageUrl;
         document.getElementById('modal-description').innerText = description;
-    }
+    
+         // Set the URLs for the buttons
+        document.getElementById('spotify-link').href = spotifyUrl;
+        document.getElementById('author-link').href = authorUrl;
+        document.getElementById('google-link').href = googleUrl;
+      }
   
     function closeModal() {
         document.getElementById('modal').style.display = 'none';
