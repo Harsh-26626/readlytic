@@ -84,7 +84,9 @@
   }
   
   .modal-details {
-      max-height: 300px;
+      max-height: 700px;
+      height: 600px;
+      width: 1200px;
       overflow-y: auto;
   }
   
@@ -117,12 +119,6 @@
 .button img {
     height: 30px;
     width: 70px;
-    margin-right: 8px;
-}
-
-.button imgg {
-    height: 30px;
-    width: 100px;
     margin-right: 8px;
 }
   
