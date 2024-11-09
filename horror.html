@@ -29,7 +29,8 @@
                     'https://open.spotify.com/playlist/7pwYR239YzGxoIqik38FBD?si=04d6fe50f1464331', 
                     'https://www.google.com/search?q=Books by Mary Shelley',
                     'https://www.google.com/search?q=Frankenstein by Mary Shelley',
-                    'https://open.spotify.com/embed/playlist/7pwYR239YzGxoIqik38FBD?utm_source=generator');
+                    'https://open.spotify.com/embed/playlist/7pwYR239YzGxoIqik38FBD?utm_source=generator',
+                    'https://www.amazon.in/Frankenstein-Mary-Shelley/dp/9380816251');
                     return false;">
             </div>
             <div style="margin-right: 25px;">
@@ -42,7 +43,8 @@
                     'https://open.spotify.com/playlist/2ElhVJ3SBdn7H1LixBnupM?si=4da88b02921a4612', 
                     'https://www.google.com/search?q=Books by Laura Purcell',
                     'https://www.google.com/search?q=The Silent Companions by Laura Purcell',
-                    'https://open.spotify.com/embed/playlist/2ElhVJ3SBdn7H1LixBnupM?utm_source=generator');
+                    'https://open.spotify.com/embed/playlist/2ElhVJ3SBdn7H1LixBnupM?utm_source=generator',
+                    'https://www.amazon.in/Frankenstein-Mary-Shelley/dp/9380816251');
                     return false;">
             </div>
             <div>
@@ -55,7 +57,8 @@
                     'https://open.spotify.com/playlist/7xiqAaBYvj5UAxjqgYWr5E?si=9c89558ee40a4460', 
                     'https://www.google.com/search?q=Books by Josh Malerman',
                     'https://www.google.com/search?q=Bird Box by Josh Malerman',
-                    'https://open.spotify.com/embed/playlist/7xiqAaBYvj5UAxjqgYWr5E?utm_source=generator');
+                    'https://open.spotify.com/embed/playlist/7xiqAaBYvj5UAxjqgYWr5E?utm_source=generator',
+                    'https://www.amazon.in/Bird-Box-Novel-Josh-Malerman/dp/0062259652');
                     return false;">
             </div>
         </div>
@@ -100,7 +103,8 @@
                     'https://open.spotify.com/playlist/1pZ5ei8ZOzswg5FnrtyXqL?si=f24bcc69080a4dbb', 
                     'https://www.google.com/search?q=Books by Iain Reid',
                     'https://www.google.com/search?q=I\'m Thinking of Ending Things by Iain Reid',
-                    'https://open.spotify.com/embed/playlist/1pZ5ei8ZOzswg5FnrtyXqL?utm_source=generator');
+                    'https://open.spotify.com/embed/playlist/1pZ5ei8ZOzswg5FnrtyXqL?utm_source=generator',
+                    'https://www.amazon.in/Im-Thinking-Ending-Things-Recommendation/dp/1501126946');
                     return false;">
             </div>
             <div style="margin-right: 25px;">
@@ -113,7 +117,8 @@
                     'https://open.spotify.com/playlist/4zSYW88rBpkxPukNjWqiAA?si=65d1dd848e224e74', 
                     'https://www.google.com/search?q=Books by Daniel Kehlmann',
                     'https://www.google.com/search?q=You Should Have Left by Daniel Kehlmann',
-                    'https://open.spotify.com/embed/playlist/4zSYW88rBpkxPukNjWqiAA?utm_source=generator');
+                    'https://open.spotify.com/embed/playlist/4zSYW88rBpkxPukNjWqiAA?utm_source=generator',
+                    'https://www.amazon.in/You-Should-Have-Left-Novel/dp/110187192X');
                     return false;">
             </div>
             <div>
@@ -126,7 +131,8 @@
                     'https://open.spotify.com/playlist/4OW0SutQ7GM4alpFf87oiO?si=764bbb7f82ee4102', 
                     'https://www.google.com/search?q=Books by Victor LaValle',
                     'https://www.google.com/search?q=The Ballad of Black Tom by Victor LaValle',
-                    'https://open.spotify.com/embed/playlist/4OW0SutQ7GM4alpFf87oiO?utm_source=generator');
+                    'https://open.spotify.com/embed/playlist/4OW0SutQ7GM4alpFf87oiO?utm_source=generator',
+                    'https://www.amazon.in/Ballad-Black-Tom-Victor-LaValle/dp/0765387867');
                     return false;">
             </div>
         </div>
@@ -183,6 +189,24 @@
               <a href="#" target="_blank" id="google-link" class="button">
                 g<img src="https://assets.onecompiler.app/42vy5gdhb/42xdkqbfy/Google%20logo.png" alt="Google Logo">
               </a>
+              
+              </div>
+              <div class="button-container">
+              <!-- Amazon Button -->
+              <a href="#" target="_blank" id="amazon-link" style="display: flex;
+              align-items: center;
+              padding: 5px 5px;
+              border: none;
+              border-radius: 5px;
+              background-color: #fff;
+              color: #fff;
+              font-size: 14px;
+              text-decoration: none;
+              transition: background-color 0.3s ease;">
+                g<img src="https://assets.onecompiler.app/42vy5gdhb/42xkuvscn/buy%20book.png" alt="Amazon Logo" style="height: 50px;
+                width: 130px;
+                margin-right: 8px;">
+              </a>
               </div>
             </div>
             <div class="modal-details">
@@ -208,7 +232,7 @@
   </div>
   
   <script>
-    function openModal(title, imageUrl, description, spotifyUrl, authorUrl, googleUrl, playlistUrl) {
+    function openModal(title, imageUrl, description, spotifyUrl, authorUrl, googleUrl, playlistUrl, amazonUrl) {
         document.getElementById('modal').style.display = 'block';
         document.getElementById('modal-title').innerText = title;
         document.getElementById('modal-image').src = imageUrl;
@@ -219,6 +243,7 @@
         document.getElementById('author-link').href = authorUrl;
         document.getElementById('google-link').href = googleUrl;
         document.getElementById('playlist-link').src = playlistUrl;
+        document.getElementById('amazon-link').href = amazonUrl;
       }
   
     function closeModal() {
